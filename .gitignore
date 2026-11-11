@@ -1,0 +1,26 @@
+# --- Rhino ---
+*.3dmbak
+*.rhl
+*.rws
+
+# --- Grasshopper ---
+*.ghbak
+*_backup.gh
+
+# --- Python ---
+__pycache__/
+*.pyc
+
+# --- Windows / OneDrive ---
+Thumbs.db
+desktop.ini
+~$*
+
+# --- Archivos pesados (compartir por OneDrive/Drive, no por GitHub) ---
+outputs/**/*.mp4
+outputs/**/*.mov
+outputs/**/*.avi
+*.zip
+
+# --- Material del curso (no es parte del proyecto) ---
+26Fall_48-724*.pdf
