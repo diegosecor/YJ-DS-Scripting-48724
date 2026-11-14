@@ -10,10 +10,10 @@ for a robotic arm to draw with a marker on a bottle.
 Image → Patterns (lines) → Projection onto the bottle → Robot path → RobotStudio
 ```
 
-| Part | Owner |
+| Part | 
 |---|---|
-| Pattern generation | Yewon |
-| Fabrication (projection, robot path) | Diego |
+| Pattern generation | 
+| Fabrication (projection, robot path) |
 
 ## Folders
 
