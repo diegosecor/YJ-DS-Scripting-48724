@@ -1,5 +1,5 @@
 """
-Celdas FALSAS para probar sistemas sin esperar la gramatica.
+FAKE cells to test line systems without waiting for the grammar.
 
     from testing import fake_cells
     cells = fake_cells(nx=8, ny=6, seed=1)

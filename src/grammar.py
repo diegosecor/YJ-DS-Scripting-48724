@@ -1,14 +1,14 @@
 """
-[ESTRUCTURA] Gramatica de subdivision recursiva.
+[PATTERN GENERATION] Recursive subdivision grammar.
 
-    Entrada: celda inicial (el lienzo completo) + campos de la imagen
-    Salida:  lista de Cell (ver contract.py)
+    Input:  initial cell (the whole canvas) + image fields
+    Output: list of Cell (see contract.py)
 
-Reglas iniciales (borrador):
-    R1: celda con detalle alto     -> 4 celdas (cuadrantes)
-    R2: celda con direccion clara  -> 2 rectangulos orientados
-    R3: celda con tono medio       -> 2 triangulos (diagonal)
-    R4: celda terminal             -> se entrega al sistema de lineas
+Initial rules (draft):
+    R1: cell with high detail         -> 4 cells (quadrants)
+    R2: cell with a clear direction   -> 2 rectangles oriented along it
+    R3: cell with mid tone            -> 2 triangles (diagonal)
+    R4: terminal cell                 -> handed to a line system
 
-TODO: implementar.
+TODO: implement.
 """

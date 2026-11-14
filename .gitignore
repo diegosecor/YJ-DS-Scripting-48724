@@ -16,11 +16,14 @@ Thumbs.db
 desktop.ini
 ~$*
 
-# --- Archivos pesados (compartir por OneDrive/Drive, no por GitHub) ---
+# --- Large files (share through OneDrive/Drive, not GitHub) ---
 outputs/**/*.mp4
 outputs/**/*.mov
 outputs/**/*.avi
 *.zip
 
-# --- Material del curso (no es parte del proyecto) ---
+# --- Course material (not part of the project) ---
 26Fall_48-724*.pdf
+
+# --- Second local copy of this repo (cloned inside the folder) ---
+GITHUB/

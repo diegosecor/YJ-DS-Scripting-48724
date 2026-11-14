@@ -1,14 +1,14 @@
 """
-Catalogo de sistemas de lineas.
+Catalog of line systems.
 
-Agregar un sistema nuevo:
-    1. Crear un archivo en systems/ (ej. hankin.py)
-    2. Escribir la funcion con @register("hankin")
-    3. Importarlo abajo en la lista de imports
+Adding a new system:
+    1. Create a file in systems/ (e.g. hankin.py)
+    2. Write the function with @register("hankin")
+    3. Import it in the list of imports below
 
-Uso:
+Usage:
     from systems import SYSTEMS, run
-    lineas = run("parallel", cell, spacing=2.0)
+    lines = run("parallel", cell, spacing=2.0)
 """
 
 SYSTEMS = {}
@@ -23,9 +23,9 @@ def register(name):
 
 def run(name, cell, **params):
     if name not in SYSTEMS:
-        raise KeyError("Sistema '%s' no existe. Disponibles: %s" % (name, list(SYSTEMS)))
+        raise KeyError("System '%s' does not exist. Available: %s" % (name, list(SYSTEMS)))
     return SYSTEMS[name](cell, **params)
 
 
-# --- registrar aqui cada sistema ---
+# --- register every system here ---
 from . import example  # noqa: E402,F401

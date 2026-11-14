@@ -1,9 +1,8 @@
 """
-Sistema de EJEMPLO: lineas paralelas segun el tono y la direccion.
+EXAMPLE system: parallel lines driven by tone and direction.
 
-No es un sistema final; sirve para probar que el contrato funciona
-de punta a punta (celdas -> lineas -> Grasshopper -> botella).
-Usarlo como plantilla para los sistemas reales.
+Not a final system; it is here to test that the contract works end to end
+(cells -> lines -> Grasshopper -> bottle). Use it as a template for the real systems.
 """
 
 import math
@@ -14,7 +13,7 @@ from config import MIN_SPACING
 
 @register("parallel")
 def parallel(cell, max_spacing=6.0, **_):
-    # tono alto (oscuro) = lineas mas juntas
+    # high tone (dark) = lines closer together
     spacing = max_spacing - cell.tone * (max_spacing - MIN_SPACING)
     if cell.tone < 0.05:
         return []
@@ -23,7 +22,7 @@ def parallel(cell, max_spacing=6.0, **_):
     x0, y0, x1, y1 = cell.bbox()
     radius = math.hypot(x1 - x0, y1 - y0) / 2.0
     a = cell.direction
-    dx, dy = math.cos(a), math.sin(a)        # direccion de las lineas
+    dx, dy = math.cos(a), math.sin(a)        # line direction
     nx, ny = -dy, dx                         # normal
 
     lines = []
@@ -39,7 +38,7 @@ def parallel(cell, max_spacing=6.0, **_):
 
 
 def clip_segment_to_box(p, q, x0, y0, x1, y1):
-    """Recorte Liang-Barsky de un segmento contra un rectangulo."""
+    """Liang-Barsky clipping of a segment against a rectangle."""
     (px, py), (qx, qy) = p, q
     dx, dy = qx - px, qy - py
     t0, t1 = 0.0, 1.0

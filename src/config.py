@@ -1,18 +1,18 @@
 """
-Configuracion compartida del proyecto.
+Shared project configuration.
 
-Todo el trabajo se hace en 2D, en milimetros, dentro del rectangulo
-de la botella "desenrollada":
-    x = 0 .. CANVAS_WIDTH   (alrededor de la botella; x = 0 es la costura)
-    y = 0 .. CANVAS_HEIGHT  (altura, desde abajo)
+All the work happens in 2D, in millimeters, inside the rectangle of the
+"unrolled" bottle:
+    x = 0 .. CANVAS_WIDTH   (around the bottle; x = 0 is the seam)
+    y = 0 .. CANVAS_HEIGHT  (height, from the bottom)
 
-Cambiar estos valores solo de comun acuerdo.
+Change these values only by mutual agreement.
 """
 
-# TODO: medir la botella real (circunferencia x altura dibujable)
+# TODO: measure the real bottle (drawable circumference x height)
 CANVAS_WIDTH = 220.0   # mm
 CANVAS_HEIGHT = 180.0  # mm
 
-# Restricciones del marcador
-PEN_WIDTH = 1.0        # mm, grosor del trazo
-MIN_SPACING = 1.5      # mm, separacion minima entre lineas paralelas
+# Marker constraints
+PEN_WIDTH = 1.0        # mm, stroke width
+MIN_SPACING = 1.5      # mm, minimum distance between parallel lines

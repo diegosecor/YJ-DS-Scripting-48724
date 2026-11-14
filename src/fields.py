@@ -1,9 +1,9 @@
 """
-[ESTRUCTURA] Imagen -> campos.
+[PATTERN GENERATION] Image -> fields.
 
-    tone(x, y)      0..1   brillo invertido
-    direction(x, y) rad    orientacion de los bordes (gradiente)
-    detail(x, y)    0..1   cantidad de bordes
+    tone(x, y)      0..1   inverted brightness
+    direction(x, y) rad    orientation of the edges (gradient)
+    detail(x, y)    0..1   amount of edges
 
-TODO: implementar (Image Sampler o OpenCV).
+TODO: implement (Image Sampler or OpenCV).
 """

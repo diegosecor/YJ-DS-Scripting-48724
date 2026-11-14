@@ -1,7 +1,7 @@
 """
-[ESTRUCTURA] Imagen -> capas (mascaras / curvas de borde cerradas).
+[PATTERN GENERATION] Image -> layers (masks / closed boundary curves).
 
-Modos: brillo (posterizar), color (k-means), contornos, manual.
+Modes: brightness (posterize), color (k-means), contours, manual.
 
-TODO: implementar.
+TODO: implement.
 """

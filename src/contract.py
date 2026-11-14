@@ -1,33 +1,34 @@
 """
-CONTRATO entre los dos modulos del proyecto.
+CONTRACT between the two modules of the project.
 
-    Estructura (fields / layers / grammar)  --->  lista de Cell
-    Sistemas de lineas (systems/)           --->  recibe Cell, devuelve Polylines
+    Pattern generation (fields / layers / grammar)  --->  list of Cell
+    Line systems (systems/)                         --->  take a Cell, return Polylines
+    Fabrication                                     --->  takes Polylines, maps them to the bottle
 
-Este archivo es compartido: cambiarlo SOLO de comun acuerdo.
+This file is shared: change it ONLY by mutual agreement.
 
-La geometria se guarda como tuplas (x, y) en mm, sin depender de Rhino.
-Asi el codigo se puede probar en Python normal; la conversion a curvas
-de Rhino se hace en gh_bridge.py.
+Geometry is stored as (x, y) tuples in mm, with no Rhino dependency.
+That way the code can be tested in plain Python; the conversion to Rhino
+curves happens in gh_bridge.py.
 """
 
 from dataclasses import dataclass, field
 from typing import List, Tuple
 
 Point = Tuple[float, float]
-Polyline = List[Point]          # lista de puntos; cerrada si el primero == el ultimo
+Polyline = List[Point]          # list of points; closed if first == last
 
 
 @dataclass
 class Cell:
-    polygon: Polyline           # borde cerrado de la celda, en mm
+    polygon: Polyline           # closed boundary of the cell, in mm
     id: int = 0
-    depth: int = 0              # nivel de recursion de la gramatica
-    layer: int = 0              # capa a la que pertenece (= marcador)
-    tone: float = 0.5           # 0 = blanco, 1 = negro (promedio de la celda)
-    direction: float = 0.0      # angulo dominante de la imagen, en radianes
-    detail: float = 0.0         # 0..1, cantidad de bordes en la celda
-    tags: dict = field(default_factory=dict)  # etiquetas extra de la gramatica
+    depth: int = 0              # recursion level of the grammar
+    layer: int = 0              # layer it belongs to (= marker)
+    tone: float = 0.5           # 0 = white, 1 = black (cell average)
+    direction: float = 0.0      # dominant image direction, in radians
+    detail: float = 0.0         # 0..1, amount of edges in the cell
+    tags: dict = field(default_factory=dict)  # extra grammar labels
 
     def bbox(self):
         xs = [p[0] for p in self.polygon]
@@ -39,8 +40,8 @@ class Cell:
         return ((x0 + x1) / 2.0, (y0 + y1) / 2.0)
 
 
-# Firma de todo sistema de lineas:
+# Signature of every line system:
 #
-#     def mi_sistema(cell: Cell, **params) -> List[Polyline]
+#     def my_system(cell: Cell, **params) -> List[Polyline]
 #
-# Se registra con @register("nombre") en systems/__init__.py
+# Registered with @register("name") in systems/__init__.py

@@ -1,9 +1,9 @@
 """
-Puente entre el codigo (tuplas en mm) y Rhino/Grasshopper.
+Bridge between the code (tuples in mm) and Rhino/Grasshopper.
 
-Este es el UNICO archivo que importa Rhino.
+This is the ONLY file that imports Rhino.
 
-En un componente Python 3 de Grasshopper (Rhino 8), pegar al inicio:
+In a Python 3 component in Grasshopper (Rhino 8), paste at the top:
 
     #! python3
     import sys, os, importlib
@@ -13,10 +13,10 @@ En un componente Python 3 de Grasshopper (Rhino 8), pegar al inicio:
         sys.path.insert(0, src)
 
     import gh_bridge, systems, testing
-    importlib.reload(gh_bridge)   # recarga cambios mientras programan
+    importlib.reload(gh_bridge)   # reloads changes while you code
 
-(El .gh tiene que estar guardado dentro de la carpeta gh/ para que la ruta funcione
-en ambos computadores.)
+(The .gh must be saved inside the gh/ folder so the path works on
+both computers.)
 """
 
 import Rhino.Geometry as rg
