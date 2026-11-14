@@ -10,23 +10,20 @@ for a robotic arm to draw with a marker on a bottle.
 Image → Patterns (lines) → Projection onto the bottle → Robot path → RobotStudio
 ```
 
-| Part | 
-| Pattern generation | 
-| Fabrication (projection, robot path) |
-
 ## Folders
 
 ```
-src/patterns/      Python code – pattern generation 
-src/fabrication/   Python code – projection + robot path 
+src/patterns/      Python code – pattern generation
+src/fabrication/   Python code – projection + robot path
 gh/                Grasshopper files
 docs/              research, notes, plugin guide
 ```
 
-## Workflow (GitHub Desktop)
+## Working together (GitHub Desktop)
 
 1. **Pull** before you start.
 2. Work.
-3. **Commit** + **Push** when you finish.
+3. **Commit** + **Push** when you finish, with a message that says what changed.
 
-Each person edits only their own files.
+If you are both going to edit the same `.gh` file, tell each other first:
+Grasshopper files can't be merged, so the last push would overwrite the other.
