@@ -18,8 +18,8 @@ Image → Patterns (lines) → Projection onto the bottle → Robot path → Rob
 ## Folders
 
 ```
-src/patterns/      Python code – pattern generation (Yewon)
-src/fabrication/   Python code – projection + robot path (Diego)
+src/patterns/      Python code – pattern generation 
+src/fabrication/   Python code – projection + robot path 
 gh/                Grasshopper files
 docs/              research, notes, plugin guide
 ```
