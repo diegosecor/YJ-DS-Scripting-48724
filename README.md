@@ -11,7 +11,6 @@ Image → Patterns (lines) → Projection onto the bottle → Robot path → Rob
 ```
 
 | Part | 
-|---|---|
 | Pattern generation | 
 | Fabrication (projection, robot path) |
 
