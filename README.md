@@ -18,9 +18,10 @@ Image → Patterns (lines) → Projection onto the bottle → Robot path → Rob
 ## Folders
 
 ```
-src/    Python code
-gh/     Grasshopper files
-docs/   research, notes, plugin guide
+src/patterns/      Python code – pattern generation (Yewon)
+src/fabrication/   Python code – projection + robot path (Diego)
+gh/                Grasshopper files
+docs/              research, notes, plugin guide
 ```
 
 ## Workflow (GitHub Desktop)
